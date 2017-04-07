@@ -1,4 +1,4 @@
-# WeixinBot [![star this repo](http://github-svg-buttons.herokuapp.com/star.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](http://github.com/Urinx/WeixinBot) [![fork this repo](http://github-svg-buttons.herokuapp.com/fork.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](http://github.com/Urinx/WeixinBot/fork) ![python](https://img.shields.io/badge/python-2.7-ff69b4.svg)
+# WeixinBot [![star this repo](http://github-svg-buttons.herokuapp.com/star.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](https://github.com/orangle/SimpleWxBot) [![fork this repo](http://github-svg-buttons.herokuapp.com/fork.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](https://github.com/orangle/SimpleWxBot/fork) ![python](https://img.shields.io/badge/python-3-ff69b4.svg)
 
 网页版微信API，包含终端版微信及微信机器人
 
@@ -337,7 +337,7 @@ selector:
 			'FromUserName': '',
 			'PlayLength': 0,
 			'RecommendInfo': {...},
-			'Content': "", 
+			'Content': "",
 			'StatusNotifyUserName': '',
 			'StatusNotifyCode': 5,
 			'Status': 3,
@@ -350,7 +350,7 @@ selector:
 			'ImgStatus': 1,
 			'MsgType': 51,
 			'ImgHeight': 0,
-			'MediaId': '', 
+			'MediaId': '',
 			'FileName': '',
 			'FileSize': '',
 			...
@@ -592,18 +592,18 @@ Content:
 RecommendInfo:
 	{
 		"UserName": "xxx", // ID
-		"Province": "xxx", 
-		"City": "xxx", 
-		"Scene": 17, 
-		"QQNum": 0, 
-		"Content": "", 
+		"Province": "xxx",
+		"City": "xxx",
+		"Scene": 17,
+		"QQNum": 0,
+		"Content": "",
 		"Alias": "xxx", // 微信号
-		"OpCode": 0, 
-		"Signature": "", 
-		"Ticket": "", 
+		"OpCode": 0,
+		"Signature": "",
+		"Ticket": "",
 		"Sex": 0, // 1:男, 2:女
 		"NickName": "xxx", // 昵称
-		"AttrStatus": 4293221, 
+		"AttrStatus": 4293221,
 		"VerifyFlag": 0
 	}
 ```
@@ -627,7 +627,7 @@ FromUserName: 发送方ID
 ToUserName: 接收方ID
 Content:
 	<msg>
-		<emoji fromusername = "" tousername = "" type="2" idbuffer="media:0_0" md5="e68363487d8f0519c4e1047de403b2e7" len = "86235" productid="com.tencent.xin.emoticon.bilibili" androidmd5="e68363487d8f0519c4e1047de403b2e7" androidlen="86235" s60v3md5 = "e68363487d8f0519c4e1047de403b2e7" s60v3len="86235" s60v5md5 = "e68363487d8f0519c4e1047de403b2e7" s60v5len="86235" cdnurl = "http://emoji.qpic.cn/wx_emoji/eFygWtxcoMF8M0oCCsksMA0gplXAFQNpiaqsmOicbXl1OC4Tyx18SGsQ/" designerid = "" thumburl = "http://mmbiz.qpic.cn/mmemoticon/dx4Y70y9XctRJf6tKsy7FwWosxd4DAtItSfhKS0Czr56A70p8U5O8g/0" encrypturl = "http://emoji.qpic.cn/wx_emoji/UyYVK8GMlq5VnJ56a4GkKHAiaC266Y0me0KtW6JN2FAZcXiaFKccRevA/" aeskey= "a911cc2ec96ddb781b5ca85d24143642" ></emoji> 
+		<emoji fromusername = "" tousername = "" type="2" idbuffer="media:0_0" md5="e68363487d8f0519c4e1047de403b2e7" len = "86235" productid="com.tencent.xin.emoticon.bilibili" androidmd5="e68363487d8f0519c4e1047de403b2e7" androidlen="86235" s60v3md5 = "e68363487d8f0519c4e1047de403b2e7" s60v3len="86235" s60v5md5 = "e68363487d8f0519c4e1047de403b2e7" s60v5len="86235" cdnurl = "http://emoji.qpic.cn/wx_emoji/eFygWtxcoMF8M0oCCsksMA0gplXAFQNpiaqsmOicbXl1OC4Tyx18SGsQ/" designerid = "" thumburl = "http://mmbiz.qpic.cn/mmemoticon/dx4Y70y9XctRJf6tKsy7FwWosxd4DAtItSfhKS0Czr56A70p8U5O8g/0" encrypturl = "http://emoji.qpic.cn/wx_emoji/UyYVK8GMlq5VnJ56a4GkKHAiaC266Y0me0KtW6JN2FAZcXiaFKccRevA/" aeskey= "a911cc2ec96ddb781b5ca85d24143642" ></emoji>
 		<gameext type="0" content="0" ></gameext>
 	</msg>
 ```
@@ -669,7 +669,7 @@ FileName: 音乐名
 
 AppInfo: // 分享链接的应用
 	{
-		Type: 0, 
+		Type: 0,
 		AppID: wx485a97c844086dc9
 	}
 
