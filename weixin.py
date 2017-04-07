@@ -64,6 +64,29 @@ def _decode_dict(data):
     return rv
 
 
+def emoji_print(rawstring):
+    """ orangleliu<span class="emoji emoji1f4d6"></span>
+    """
+    # 提取所有表情html
+    # 替换所有表情
+    flag = True
+    while flag:
+        start = rawstring.find('<span')
+        end = rawstring.find('></span>')
+        if start < 0 or end < 0:
+            flag = False
+            break
+        emojistr = rawstring[start : end + 8]
+        try:
+            emojicode = re.search(' emoji(.+?)\"', emojistr).group(1)
+            emoji = chr(int(emojicode, 16))
+        except:
+            emoji = ""
+        rawstring = rawstring.replace(emojistr, emoji)
+    return rawstring
+
+
+
 class WebWeixin(object):
 
     def __str__(self):
@@ -732,11 +755,12 @@ class WebWeixin(object):
                 content = msg['message']
 
         if groupName != None:
-            logger.info('%s |%s| %s -> %s: %s' % (message_id, groupName.strip(),
-                                                   srcName.strip(), dstName.strip(), content.replace('<br/>', '\n')))
+            logger.info('%s |%s| %s -> %s: %s' % (message_id, emoji_print(groupName.strip()),
+                                                  emoji_print(srcName.strip()), emoji_print(dstName.strip()),
+                                                  content.replace('<br/>', '\n')))
         else:
-            logger.info('%s %s -> %s: %s' % (message_id, srcName.strip(),
-                                              dstName.strip(), content.replace('<br/>', '\n')))
+            logger.info('%s %s -> %s: %s' % (message_id, emoji_print(srcName.strip()),
+                                              emoji_print(dstName.strip()), content.replace('<br/>', '\n')))
 
     def handleMsg(self, r):
         for msg in r['AddMsgList']:
